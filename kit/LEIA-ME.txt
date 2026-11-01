@@ -1,0 +1,26 @@
+PRECIFICAJÁ — KIT COMPLETO DE PRECIFICAÇÃO
+==========================================
+
+Obrigado pela compra.
+
+Arquivos neste kit:
+1) planilha-precificacao.csv
+   - Abra no Excel, Google Sheets ou Numbers
+   - Preencha as células amarelas / campos "EDITAR"
+   - A planilha calcula preço mínimo, recomendado e premium
+
+2) guia-precificacao.md
+   - Método em 7 passos para precificar serviços no Brasil
+   - Como conversar preço sem se desvalorizar
+   - Exemplos por nicho (design, dev, social media, consultoria)
+
+3) templates-proposta.md
+   - 3 modelos prontos de proposta comercial
+   - Copie, adapte e envie no mesmo dia
+
+Dica rápida:
+- Preço mínimo = custo + impostos + margem de sobrevivência
+- Preço recomendado = mínimo × 1,4 a 1,8
+- Nunca feche abaixo do mínimo (isso é prejuízo disfarçado)
+
+Suporte / comprovante: WhatsApp do PIX 1198663-7470

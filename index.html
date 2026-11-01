@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrecificaJá — Saiba quanto cobrar de verdade</title>
+  <meta name="description" content="Kit prático de precificação para freelancers e MEIs no Brasil: planilha + guia + templates de proposta. Pague via PIX e baixe na hora." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="brand" href="index.html">PrecificaJá</a>
+    <a class="top-cta" href="#checkout">Kit R$ 29,90 via PIX</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Para freelancers e MEIs no Brasil</p>
+        <h1 class="brand-hero">PrecificaJá</h1>
+        <p class="lede">Pare de chutar preço. Em uma tarde você define o piso, o valor recomendado e já tem a proposta pronta para enviar — cobrando o que o trabalho realmente custa.</p>
+        <div class="cta-row" id="comprar">
+          <a class="btn primary" href="#checkout">Pagar R$ 29,90 no PIX</a>
+          <a class="btn ghost" href="#o-que-vem">Ver o que vem incluso</a>
+        </div>
+        <p class="micro">PIX na hora · download liberado em seguida · planilha + guia + 3 templates</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="sheet">
+          <div class="sheet-top">
+            <span>Cálculo ao vivo</span>
+            <span class="dot"></span>
+          </div>
+          <div class="row"><span>Custos/mês</span><strong id="vizCustos">R$ 1.726</strong></div>
+          <div class="row"><span>Horas vendáveis</span><strong>68h</strong></div>
+          <div class="row accent"><span>Piso/hora</span><strong id="vizPiso">R$ 25</strong></div>
+          <div class="row accent2"><span>Preço recomendado</span><strong id="vizRec">R$ 41/h</strong></div>
+          <div class="row big"><span>Projeto 20h</span><strong id="vizProj">R$ 1.068</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calc-section" id="simulador">
+      <h2>Simule seu piso em 30 segundos</h2>
+      <p class="section-sub">Grátis. O kit completo entrega a planilha, o método e os templates para fechar cliente.</p>
+      <div class="calc">
+        <label>
+          Custos mensais (R$)
+          <input type="number" id="custos" value="1726" min="0" step="50" />
+        </label>
+        <label>
+          Horas vendáveis / mês
+          <input type="number" id="horas" value="68" min="1" step="1" />
+        </label>
+        <label>
+          Margem (ex: 1.6)
+          <input type="number" id="margem" value="1.6" min="1" step="0.1" />
+        </label>
+        <div class="calc-out">
+          <div>
+            <span>Piso/hora</span>
+            <strong id="outPiso">R$ 0</strong>
+          </div>
+          <div>
+            <span>Recomendado/hora</span>
+            <strong id="outRec">R$ 0</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="includes" id="o-que-vem">
+      <h2>O que você leva</h2>
+      <ul class="include-list">
+        <li>
+          <strong>Planilha de precificação</strong>
+          <span>Custos, horas vendáveis, piso, projeto fechado e tabela por nicho.</span>
+        </li>
+        <li>
+          <strong>Guia prático (PT-BR)</strong>
+          <span>Método em 7 passos + frases prontas para negociar sem se rebaixar.</span>
+        </li>
+        <li>
+          <strong>3 templates de proposta</strong>
+          <span>Projeto fechado, retainer mensal e diagnóstico pago — copie e envie.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="checkout-section" id="checkout">
+      <div class="checkout-card">
+        <h2>Levar o PrecificaJá</h2>
+        <p class="price"><span>R$</span>29<span>,90</span></p>
+        <p class="checkout-note">1) Copie a chave PIX e pague R$ 29,90 · 2) Clique em “Já paguei” · 3) Baixe o kit na hora.</p>
+
+        <div id="autoCheckout" class="auto-checkout" hidden>
+          <form id="autoCheckoutForm">
+            <label>
+              E-mail para o pedido (checkout automático)
+              <input type="email" name="email" required placeholder="voce@email.com" autocomplete="email" />
+            </label>
+            <button type="submit" class="btn primary wide" id="autoBuyBtn">Pagar no Mercado Pago (PIX)</button>
+            <p class="form-status" id="autoStatus" role="status"></p>
+          </form>
+          <p class="fine">Ou pague direto na chave PIX abaixo.</p>
+        </div>
+
+        <div id="mpLinkWrap" class="mp-link-wrap" hidden>
+          <a class="btn primary wide" id="mpLink" href="#" target="_blank" rel="noopener">Pagar no Mercado Pago</a>
+          <p class="fine">Ou use o PIX manual abaixo.</p>
+        </div>
+
+        <div class="pix-box" id="pixBox">
+          <p class="pix-label">Chave PIX (telefone)</p>
+          <p class="pix-key" id="pixKey">1198663-7470</p>
+          <p class="pix-hint">Pague exatamente <strong>R$ 29,90</strong> · cai na conta do telefone acima</p>
+          <div class="pix-actions">
+            <button type="button" class="btn primary wide" id="copyPixBtn">1. Copiar chave PIX</button>
+            <button type="button" class="btn ghost wide" id="paidBtn">2. Já paguei — baixar kit</button>
+          </div>
+          <p class="form-status" id="formStatus" role="status"></p>
+          <a class="wa-link" id="waLink" href="#" target="_blank" rel="noopener">Opcional: enviar comprovante no WhatsApp</a>
+        </div>
+
+        <p class="fine">Entrega digital imediata · uso no Excel/Sheets · feito para freela e MEI no BR</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Perguntas objetivas</h2>
+      <details open>
+        <summary>Como recebo o kit?</summary>
+        <p>Pague R$ 29,90 no PIX da chave acima. Depois clique em “Já paguei — baixar kit” e baixe planilha, guia e templates na hora. Se quiser, mande o comprovante no WhatsApp.</p>
+      </details>
+      <details>
+        <summary>É só PIX?</summary>
+        <p>Sim, por enquanto o pagamento é PIX direto na chave do telefone. Rápido, sem cadastro e o valor cai na hora na conta do dono.</p>
+      </details>
+      <details>
+        <summary>Serve para qual área?</summary>
+        <p>Design, social media, programação, consultoria, automações, serviços locais — qualquer trabalho cobrado por projeto ou hora.</p>
+      </details>
+      <details>
+        <summary>Preciso de Excel pago?</summary>
+        <p>Não. A planilha abre no Google Sheets, Excel ou Numbers. O guia e os templates abrem em qualquer editor de texto.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><strong>PrecificaJá</strong> — ferramenta prática, sem enrolação.</p>
+    <p class="muted">Produto digital de informação. Pagamento via PIX <span id="footPix">1198663-7470</span>.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
