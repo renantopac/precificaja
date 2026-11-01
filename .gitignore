@@ -1,0 +1,9 @@
+node_modules/
+.env
+.DS_Store
+*.log
+.cache/
+tmp/
+data/orders.json
+.vercel
+dist/

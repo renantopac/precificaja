@@ -1,0 +1,20 @@
+{
+  "name": "precificaja",
+  "version": "1.0.0",
+  "description": "Kit de precificação para freelancers e MEIs no Brasil — produto digital com checkout PIX via Mercado Pago",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node server/check-env.js",
+    "build:kit": "node scripts/build-kit.js",
+    "demo:unlock": "node scripts/demo-unlock.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

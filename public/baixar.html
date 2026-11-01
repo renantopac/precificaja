@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baixar kit — PrecificaJá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .dl-wrap {
+      min-height: 80vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem 6vw;
+    }
+    .dl-box {
+      width: min(560px, 100%);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .dl-box h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.04em;
+      margin: 0 0 0.6rem;
+      line-height: 1.1;
+    }
+    .dl-box > p { color: var(--muted); margin-top: 0; }
+    .files {
+      list-style: none;
+      padding: 0;
+      margin: 1.4rem 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .files a {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-weight: 650;
+      padding: 0.95rem 1rem;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      background: #fafcf4;
+    }
+    .files a:hover { border-color: var(--ink); background: #fff; }
+    .files span { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="top">
+    <a class="brand" href="index.html">PrecificaJá</a>
+  </header>
+  <main class="dl-wrap">
+    <div class="dl-box" id="okBox" hidden>
+      <h1>Seu kit está pronto</h1>
+      <p>Baixe os 4 arquivos agora. Ordem sugerida: <strong>LEIA-ME</strong> → planilha → guia → templates (copie e envie ao cliente).</p>
+      <ul class="files">
+        <li><a href="kit/LEIA-ME.txt" download><strong>LEIA-ME.txt</strong><span>início</span></a></li>
+        <li><a href="kit/planilha-precificacao.csv" download><strong>planilha-precificacao.csv</strong><span>Excel/Sheets</span></a></li>
+        <li><a href="kit/guia-precificacao.md" download><strong>guia-precificacao.md</strong><span>método</span></a></li>
+        <li><a href="kit/templates-proposta.md" download><strong>templates-proposta.md</strong><span>3 modelos</span></a></li>
+      </ul>
+      <p class="fine">Envie o comprovante no WhatsApp se ainda não enviou — ajuda o dono a confirmar o PIX.</p>
+      <p><a href="index.html">Voltar à página inicial</a></p>
+    </div>
+    <div class="dl-box" id="blockBox" hidden>
+      <h1>Libere pelo checkout</h1>
+      <p>Abra a página inicial, pague R$ 29,90 via PIX e clique em <strong>Já paguei — liberar kit</strong>.</p>
+      <p><a class="btn primary" href="index.html#checkout">Ir para o pagamento</a></p>
+    </div>
+  </main>
+  <script>
+    const ok = sessionStorage.getItem('precificaja_paid') === '1';
+    document.getElementById(ok ? 'okBox' : 'blockBox').hidden = false;
+  </script>
+</body>
+</html>
