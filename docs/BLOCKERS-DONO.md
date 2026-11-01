@@ -3,11 +3,10 @@
 Só o que impede dinheiro cair **hoje**:
 
 1. **Confirmar a chave PIX telefone `1198663-7470`** no app do banco (recebe? conta certa?).
-2. **Publicar a landing** (se ainda não estiver no ar): um drag-and-drop da pasta `public/` no [Netlify Drop](https://app.netlify.com/drop) — sem CLI. Alternativa já preparada: GitHub Pages do repo (ver `docs/GO-LIVE.md`).
-3. **Colar a URL pública** nos textos de `docs/AQUISICAO.md` e postar **1** peça (LinkedIn, grupo freela/MEI ou WhatsApp) onde for permitido.
-4. **Deixar o WhatsApp do mesmo número aberto** para comprovante / dúvida.
+2. **Postar 1 peça** com o link `https://renantopac.github.io/precificaja/` (textos prontos em `docs/AQUISICAO.md`) — LinkedIn, grupo freela/MEI ou WhatsApp, onde for permitido.
+3. **Deixar o WhatsApp do mesmo número aberto** para comprovante / dúvida.
 
-Opcional (não bloqueia o 1º PIX): compra teste de R$ 29,90 + baixar o kit.
+Landing já no ar (GitHub Pages). Opcional: compra teste de R$ 29,90 + baixar o kit.
 
 ## Fora do caminho crítico (depois)
 

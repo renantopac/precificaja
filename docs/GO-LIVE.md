@@ -6,7 +6,7 @@
 - [x] Copy/CTA/FAQ revisados (PIX em 2 cliques)
 - [x] Kit de aquisição em `docs/AQUISICAO.md`
 - [ ] Confirmar PIX `1198663-7470` recebe
-- [ ] URL pública no ar (GitHub Pages **ou** Netlify Drop)
+- [x] URL pública: https://renantopac.github.io/precificaja/
 - [ ] 1 post/mensagem com link + UTM
 - [ ] WhatsApp do PIX monitorado
 - [ ] (Recomendado) compra teste R$ 29,90 → “Já paguei” → 4 arquivos
@@ -17,16 +17,26 @@
 2. Arraste a pasta `F:\Projetos\MakeMoney\public`  
 3. Copie a URL gerada → use em `docs/AQUISICAO.md`
 
-### GitHub Pages (já autenticado neste PC via `gh`)
+### GitHub Pages (já no ar)
 
-Repo esperado: `renantopac/precificaja`  
-URL: `https://renantopac.github.io/precificaja/`  
-Workflow: `.github/workflows/pages.yml` (publica só a pasta `public/`).
+Repo: https://github.com/renantopac/precificaja  
+URL pública: **https://renantopac.github.io/precificaja/**  
+Fonte: branch `gh-pages` (conteúdo da pasta `public/` na raiz).
 
-Se a Pages não ligar sozinha após o push:
+Para republicar após editar `public/`:
 
 ```powershell
-gh api repos/renantopac/precificaja/pages -X POST -f build_type=workflow
+$tmp = Join-Path $env:TEMP "precificaja-pages"
+Remove-Item -Recurse -Force $tmp -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Path $tmp | Out-Null
+Copy-Item -Path "F:\Projetos\MakeMoney\public\*" -Destination $tmp -Recurse -Force
+Set-Location $tmp
+git init -b gh-pages
+git add .
+git commit -m "Update site"
+git remote add origin https://github.com/renantopac/precificaja.git
+git push -u origin gh-pages --force
+Set-Location F:\Projetos\MakeMoney
 ```
 
 ### Servir local sem npm
